@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: 'head'">
+
+</head>
+<body>
+<div class="container">
+
+    <div th:include="fragments :: 'navbar'"></div>
+
+    <h1>Details of sign up #<span th:text="${item.id}"></span></h1>
+
+    <ul>
+        <li>
+            Name: <span th:utext="${item.name}">Name</span><br/>
+            Address: <span th:utext="${item.address}">Address</span><br/>
+            User: <span th:utext="${item.user}">User</span><br/>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

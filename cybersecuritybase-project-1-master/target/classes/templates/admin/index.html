@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: 'head'">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>This is an administrative page!!!</h1>
+
+    <h2>All existing sign ups:</h2>
+
+    <ul>
+        <li th:each="item : ${items}">
+            <a href="#" th:href="@{/signups/{id}(id=${item.id})}">
+                <span th:utext="${item.name}">Name</span>
+                -
+                <span th:utext="${item.address}">Address</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
